@@ -17,6 +17,10 @@ Tiny load balancer built in Golang.
 - add documentation
 - add test cases
 
+### Screen
+
+![lb-screen](assets/lb-screen.png)
+
 ### Resource
 - https://github.com/onestraw/golb  
 - https://dev.to/bmf_san/implement-a-load-balancer-in-golang-8gj  
