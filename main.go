@@ -82,6 +82,8 @@ func (s *ServerPool) HealthCheck() {
 	for _, b := range s.backends {
 		alive := isBackendAlive(b.URL)
 		b.SetAlive(alive)
+		// todo: if the backend died. Do a retry for a set number of times and if its still down, then notify and remove from the pool.
+		// todo: notify if the set number of servers in the pool is below some threshold. Should be backed by config per service.
 		log.Printf("%s [%t]\n", b.URL, alive)
 	}
 }
