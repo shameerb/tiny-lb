@@ -84,9 +84,9 @@ func (s *ServerPool) HealthCheck() {
 		conn, err := net.Dial("tcp", backend.url.Host)
 		if err != nil {
 			backend.SetActive(false)
-		} else {
-			backend.SetActive(true)
+			return
 		}
+		backend.SetActive(true)
 		conn.Close()
 	}
 }

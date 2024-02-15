@@ -19,7 +19,7 @@ Tiny load balancer built in Golang.
 
 ### Screen
 
-![lb-screen](assets/lb-screen.png)
+![snap](assets/snap.gif)
 
 ### Resource
 - https://github.com/onestraw/golb  
