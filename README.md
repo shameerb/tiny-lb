@@ -1,22 +1,24 @@
-# tiny-lb
-Tiny load balancer built in Golang.
+## tiny-lb
+Tiny load balancer built in Golang
 
 ### Features
 - Uses a round robin to spread the incoming request across live endpoints (servers)
 - healthchecks to check for dead servers to be removed from load balancing
-- cancelling requests on repeated failures with contexts
+- retries on the same endpoint and backoff
+- removing endpoint for failures (after a threshold) and rerouting to another endpoint
 
 
 ### Enhancements
+- add documentation
+- add test cases
 - Support different strategies for load balancing
+    - lru, lfu, weighted
 - load balancing by service requested (l7)
     - pool by service
     - threshold for each service (nos of servers in the pool)
 - notification systems
     - webhooks, mail etc.
 - scaling up the number of load balancers and synchronization between them
-- add documentation
-- add test cases
 
 ### Screen
 
