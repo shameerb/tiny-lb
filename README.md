@@ -1,5 +1,6 @@
 # tiny-lb
 Tiny load balancer built in Golang.
+
 ### Features
 - Uses a round robin to spread the incoming request across live endpoints (servers)
 - healthchecks to check for dead servers to be removed from load balancing

@@ -1,8 +1,8 @@
-version: "2"
+version: '2'
 services:
   front:
     build: .
-    container_name: load-balancer
+    container_name: lb
     ports:
       - "3030:3030"
     command: --backends "http://web1:80,http://web2:80,http://web3:80"
