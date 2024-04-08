@@ -15,6 +15,7 @@ var sp serverpool.ServerPool
 
 func HealthCheck() {
 	for range time.Tick(time.Second * 10) {
+		fmt.Println("healthcheck ....")
 		sp.HealthCheck()
 	}
 }
@@ -25,7 +26,6 @@ func main() {
 	flag.IntVar(&port, "port", 3030, "port")
 	flag.StringVar(&servers, "backends", "", "backend servers to listen to")
 	flag.Parse()
-	fmt.Println("Port ", port)
 	if len(servers) == 0 {
 		log.Fatal("no servers to load balancer")
 	}
